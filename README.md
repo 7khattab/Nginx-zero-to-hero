@@ -27,8 +27,7 @@ This repository documents my practical journey learning Nginx through real-world
 | Lab 03 | Rewrite & Return               |
 | Lab 04 | Logging & Error Pages          |
 | Lab 05 | SSL/TLS self-signed certificate|
-| Lab 06 | Local CA                       |
-| Lab 07 | Let's encrypt using certbot    |
+
 
 
 ---
