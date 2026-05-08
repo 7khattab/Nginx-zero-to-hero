@@ -13,6 +13,8 @@ This repository documents my practical journey learning Nginx through real-world
 * Access & Error logs
 * Redirects (rewrite vs return)
 * Directory listing (autoindex)
+* SSL/TLS
+
 
 ---
 
@@ -24,6 +26,10 @@ This repository documents my practical journey learning Nginx through real-world
 | Lab 02 | Multi Site & Directory Listing |
 | Lab 03 | Rewrite & Return               |
 | Lab 04 | Logging & Error Pages          |
+| Lab 05 | SSL/TLS self-signed certificate|
+| Lab 06 | Local CA                       |
+| Lab 07 | Let's encrypt using certbot    |
+
 
 ---
 
