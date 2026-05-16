@@ -20,7 +20,7 @@ location / {
 
     proxy_pass http://backend_servers;
 
-    proxy_cache my_cache;                                   # using the cahe zone we make 
+    proxy_cache mycache;                                   # using the cahe zone we make 
 
     proxy_cache_valid 200 10m;                              # any correct responce save it 10 minutes in cache 
 
