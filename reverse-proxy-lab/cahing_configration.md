@@ -14,5 +14,24 @@ inactive=60m;                      # if the data not call or use after 60m delet
 
 
 
+3) using cache we made it my server part : 
 
+location / {
+
+    proxy_pass http://backend_servers;
+
+    proxy_cache my_cache;                                   # using the cahe zone we make 
+
+    proxy_cache_valid 200 10m;                              # any correct responce save it 10 minutes in cache 
+
+    proxy_cache_use_stale error timeout updating
+      http_500 http_502 http_503 http_504;  # if any error in server not give the error show old vsersion cache 
+
+    add_header X-Cache-Status $upstream_cache_status; # add ( HIT - MISS - BYPASS - EXPIRED ) depend on cache status 
+
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+}
 
